@@ -90,7 +90,7 @@ public class UserService {
                     break;
             }
             //先用时间戳当主键
-            Commission commission = new Commission(System.currentTimeMillis(), transaction.getTransactionId(), transaction.getUserId(), referrerCommission);
+            Commission commission = new Commission(System.currentTimeMillis(), transaction.getTransactionId(), referrer.getId(), referrerCommission);
             //入库
 
             if (totalCommission <= 0) {
